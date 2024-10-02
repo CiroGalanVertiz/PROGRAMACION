@@ -17,7 +17,7 @@ public class Ejercicio3 {
         s2.variarPosicion(45,45);
         System.out.println(s2.enOrbita());
         System.out.println(s1.enOrbita());
-        s2.posicion();
+        System.out.println(s2.posicion());
         
     }
 }
