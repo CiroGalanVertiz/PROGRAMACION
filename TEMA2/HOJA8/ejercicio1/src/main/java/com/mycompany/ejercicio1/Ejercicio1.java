@@ -26,4 +26,4 @@ public class Ejercicio1 {
         System.out.println("Tu DNI es: "+P1.dniValido()); 
     } 
     }
-}
+
