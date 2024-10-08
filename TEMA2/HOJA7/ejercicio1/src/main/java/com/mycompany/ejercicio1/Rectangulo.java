@@ -42,6 +42,6 @@ public class Rectangulo {
     }
      public void diagonal(){
          double diagonal = Math.sqrt(Math.sqrt(largo)+Math.sqrt(ancho));
-         System.out.printf("%s%,.2f%s","La diagonal mide: ",diagonal," cm");
+         System.out.printf("%s%,.2f%s","La diagonal mide: ",diagonal," cm\n");
      }
 }

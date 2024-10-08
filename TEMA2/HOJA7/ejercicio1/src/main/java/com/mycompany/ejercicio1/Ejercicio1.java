@@ -16,7 +16,7 @@ public class Ejercicio1 {
         r1.setLargo(4);
         r1.area();
         r1.diagonal();
-        r1.getAncho();
-        r1.getLargo();
+        System.out.println("El ancho es: "+r1.getAncho());
+        System.out.println("El largo es: "+r1.getLargo());
     }
 }
