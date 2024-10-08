@@ -11,6 +11,12 @@ package com.mycompany.ejercicio1;
 public class Ejercicio1 {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        Rectangulo r1 = new Rectangulo();
+        r1.setAncho(3);
+        r1.setLargo(4);
+        r1.area();
+        r1.diagonal();
+        r1.getAncho();
+        r1.getLargo();
     }
 }
