@@ -4,6 +4,8 @@
 
 package com.mycompany.ejercicio1;
 
+import java.util.Scanner;
+
 /**
  *
  * @author dam1
@@ -11,7 +13,8 @@ package com.mycompany.ejercicio1;
 public class Ejercicio1 {
 
     public static void main(String[] args) {
-       Alarma a1 = new Alarma(45);
+        System.out.println("Introduce los grados");
+       Alarma a1 = new Alarma(new Scanner(System.in).nextDouble());
         a1.comprueba();
         if(a1.getTimbre()==Timbre.encendido){
             a1.normaliza();
