@@ -16,7 +16,7 @@ public class Ejercicio2 {
        System.out.println("¿El triangulo t1 es isosceles? "+t1.esIsosceles());
        System.out.println("¿El triangulo t1 es equilatero? "+t1.esEquilatero());
        System.out.println("¿El triangulo t2 es equilatero? "+t2.esEquilatero());
-     
+       System.out.println("Perimetrodel t2: "+t2.perimetro());
        
     }
 }

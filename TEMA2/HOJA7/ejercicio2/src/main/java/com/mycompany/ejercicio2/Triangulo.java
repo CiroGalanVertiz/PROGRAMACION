@@ -24,4 +24,7 @@ public class Triangulo {
     public boolean esEquilatero(){
         return lado1==lado2 && lado2==lado3;
     }
+    public double perimetro(){
+        return lado1+lado2+lado3;
+    }
 }
