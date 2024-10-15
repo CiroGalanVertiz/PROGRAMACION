@@ -41,7 +41,7 @@ public class Rectangulo {
         System.out.println("El area del rectangulo son: "+ancho*largo+" cm cuadrados");
     }
      public void diagonal(){
-         double diagonal = Math.sqrt(Math.sqrt(largo)+Math.sqrt(ancho));
+         double diagonal = Math.sqrt(Math.pow(largo,2)+Math.pow(ancho,2));
          System.out.printf("%s%,.2f%s","La diagonal mide: ",diagonal," cm\n");
      }
 }
