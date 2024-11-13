@@ -10,7 +10,7 @@ package com.mycompany.ejercicio2;
  */
 public class Ejercicio2 {
 
-    public static void main(String[] args) {
+    public static void main(String[] args){
         new Calculo().metodo1();
         new Calculo().metodo2();
         new Calculo().metodo3();

@@ -15,8 +15,9 @@ public class Calculo {
 
     public void metodo1() {
         int c = 10;
-        while (c>= 0) {
+        while(c>= 0) {
             System.out.println(c);
+            
             c--;
         }
         System.out.println("¡DESPEGUE!");
