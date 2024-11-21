@@ -25,12 +25,12 @@ public class Ejercicio7 {
              System.out.println("valor " + (i + 1) + ": "+array[i]);
         }
         for (int i = 0; i < array.length; i++) {
-           for (int j = 0; j < array.length; j++) {
-          if(array[i]<array[j]){
-              aux2=array[i];
-              array[i]=array[j];
-              array[j]=aux2;
-          }
+            for (int j = i; j < array.length; j++) {
+                if (array[i] < array[j]) {
+                    aux2 = array[i];
+                    array[i] = array[j];
+                    array[j] = aux2;
+                }
         }
         }
         for (int i = 0; i < array.length; i++) {
