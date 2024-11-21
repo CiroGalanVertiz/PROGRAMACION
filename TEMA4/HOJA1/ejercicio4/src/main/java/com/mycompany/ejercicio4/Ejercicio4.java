@@ -13,8 +13,8 @@ import java.util.Scanner;
 public class Ejercicio4 {
 
     public static void main(String[] args) {
-       int[] array = new int[5];
-       int[] array2 =new int[5];
+       int[] array = new int[10];
+       int[] array2 =new int[10];
         for (int i = 0; i < array.length; i++) {
             System.out.println("valor "+(i+1)+":");
             array[i]=new Scanner(System.in).nextInt();
