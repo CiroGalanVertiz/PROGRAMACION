@@ -29,4 +29,4 @@ public class Ejercicio6 {
         System.out.println("El numero mayor es: "+ mayor); 
     }
     }
-}
+
