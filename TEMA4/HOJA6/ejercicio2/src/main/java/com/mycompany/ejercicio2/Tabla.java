@@ -11,9 +11,12 @@ import java.util.Random;
  * @author DAM120
  */
 public class Tabla {
-    private int[][] matriz= new int[4][5];
-    Random r= new Random();
+    
+    private int[][] matriz;
+    
     public Tabla(){
+        Random r= new Random();
+        matriz=new int[4][5];
         for (int i = 0; i < matriz.length; i++) {
             for (int j = 0; j < matriz[i].length; j++) {
                matriz[i][j]=r.nextInt(100)+1;
@@ -32,8 +35,8 @@ public class Tabla {
         return cadena;
     }
     public void mayorF(int fila){
-        int mayor=0;
-        for (int i = 0; i < matriz[fila].length; i++) {
+        int mayor=matriz[fila][0];
+        for (int i = 1; i < matriz[fila].length; i++) {
             if(matriz[fila][i]>mayor){
                 mayor=matriz[fila][i];
             }
@@ -41,8 +44,8 @@ public class Tabla {
         System.out.println("Elnumero mayor de la fila "+fila+" es "+mayor);
     }
     public void mayorC(int columna){
-        int mayor=0;
-        for (int i = 0; i < matriz.length; i++) {
+        int mayor=matriz[0][columna];
+        for (int i = 1; i < matriz.length; i++) {
             if(matriz[i][columna]>mayor){
                 mayor=matriz[i][columna];
             }
@@ -54,13 +57,16 @@ public class Tabla {
         int sumatorio=0;
         double media=0;
         for (int i = 0; i < matriz.length; i++) {
-            totalNumeros+= matriz[i].length;
             for (int j = 0; j < matriz[i].length; j++) {
                 sumatorio+=matriz[i][j];
+                totalNumeros++;
             }
         }
         media=sumatorio/totalNumeros;
-        System.out.println("La media es "+media);                
+        System.out.println("La media es "+media);
+        double doble=800;
+        
+        
     }
     
 }
