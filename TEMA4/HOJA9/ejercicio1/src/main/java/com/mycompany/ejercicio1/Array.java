@@ -24,6 +24,7 @@ public class Array {
             System.out.println("introduce el valor "+(i+1)+":");
             n=new Scanner(System.in).nextInt();
             if(n>=0){
+                this.vector[i]=n;
                 i++;
             }
             else{
@@ -31,14 +32,22 @@ public class Array {
             }
         }
     }
-    public void introducir(int num,int posicion){
-        
+    public void modifcar(int num,int posicion){
+        this.vector[posicion]=num;
     }
     public void rotarIzquierda(){
-        
+        int guarda = this.vector[0];
+        for (int i = 0; i < this.vector.length-1; i++) {
+            this.vector[i]=this.vector[i+1];
+        }
+        this.vector[this.vector.length-1]=guarda;
     }
     public void rotarDerecha(){
-        
+        int guarda = this.vector[this.vector.length-1];
+        for (int i = this.vector.length-1; i >0 ; i--) {
+            this.vector[i]=this.vector[i-1];
+        }
+        this.vector[0]=guarda;
     }
     public void comparar(){
         
