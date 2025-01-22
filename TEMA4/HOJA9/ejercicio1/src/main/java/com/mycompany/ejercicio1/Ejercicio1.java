@@ -18,6 +18,11 @@ public class Ejercicio1 {
         array.mostrar();
         array.rotarDerecha();
         array.mostrar();
+        Array a=new Array();
+        a.introducir();
+        array.comparar(a);
+        array.sumaPares();
+        array.multiplos(3);
        
     }
 }

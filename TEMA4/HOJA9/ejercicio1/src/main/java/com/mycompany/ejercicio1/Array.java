@@ -16,6 +16,7 @@ public class Array {
         for(int i:this.vector){
             System.out.println(i);
         }
+        System.out.println();
     }
     public void introducir(){
         this.vector=new int[10];
@@ -41,6 +42,7 @@ public class Array {
             this.vector[i]=this.vector[i+1];
         }
         this.vector[this.vector.length-1]=guarda;
+        System.out.println();
     }
     public void rotarDerecha(){
         int guarda = this.vector[this.vector.length-1];
@@ -48,15 +50,35 @@ public class Array {
             this.vector[i]=this.vector[i-1];
         }
         this.vector[0]=guarda;
+        System.out.println();
     }
-    public void comparar(){
-        
+    public void comparar(Array a){
+        System.out.println("Valores en comun:");
+        for (int i = 0; i < this.vector.length; i++) {
+            if (a.vector[i]==this.vector[i]){
+                System.out.println(this.vector[i]);
+            }
+        }
+        System.out.println();
     }
     public void sumaPares(){
-        
+        System.out.println("Suma total de los pares:");
+        int sumaPares=0;
+        for (int i = 0; i < this.vector.length; i++) {
+            if(this.vector[i]%2==0){
+                sumaPares+=this.vector[i];
+            }
+        }
+        System.out.println(sumaPares);
+        System.out.println();
     }
-    public void multiplos(){
-        
+    public void multiplos(int num){
+        System.out.println("Multiplos de "+num+":");
+        for (int i = 0; i <this.vector.length; i++) {
+            this.vector[i]=(i+1)*num;
+            System.out.println(this.vector[i]);
+        }
+        System.out.println();
     }
     
 }
