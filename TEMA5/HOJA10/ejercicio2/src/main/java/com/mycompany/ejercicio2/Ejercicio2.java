@@ -18,7 +18,7 @@ public class Ejercicio2 {
         Griego g1= new Griego("Saul",25,2);
         Caballo c1= new Caballo(g1,100);
         if(c1.montar(t1)==-1){
-            System.out.println("no se puede montar a "+t1.getNombre());
+            
         }
         Troyano t2= new Troyano();
         Griego g2= new Griego();
