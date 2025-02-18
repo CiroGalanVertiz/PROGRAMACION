@@ -19,7 +19,7 @@ public abstract class Guerrero  implements Comparable<Guerrero>{
     public Guerrero(String nombre, int edad, int fuerza) {
         this.nombre = nombre;
         this.edad = comprobarEdad(edad)?edad:25;
-        this.fuerza = comprobarEdad(edad)?fuerza:5;
+        this.fuerza = comprobarFuerza(fuerza)?fuerza:5;
         this.herido = false;
         this.muerto = false;
     }

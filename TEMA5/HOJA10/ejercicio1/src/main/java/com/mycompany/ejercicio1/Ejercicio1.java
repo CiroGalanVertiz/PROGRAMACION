@@ -11,6 +11,9 @@ package com.mycompany.ejercicio1;
 public class Ejercicio1 {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+         Troyano t1= new Troyano("Ciro",23,2);
+        Griego g1= new Griego("Saul",25,2);
+        System.out.println(g1.getNombre());
+        System.out.println(t1.getNombre());
     }
 }
