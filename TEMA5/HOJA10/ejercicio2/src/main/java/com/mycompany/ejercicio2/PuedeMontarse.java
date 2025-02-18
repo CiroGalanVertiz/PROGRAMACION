@@ -4,10 +4,15 @@
  */
 package com.mycompany.ejercicio2;
 
+import com.mycompany.ejercicio1.Guerrero;
+
 /**
  *
  * @author DAM120
  */
 public interface PuedeMontarse {
+    public int montar(Guerrero guerrero);
+    public void desmontar();
+        
     
 }

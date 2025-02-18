@@ -4,6 +4,9 @@
 
 package com.mycompany.ejercicio2;
 
+import com.mycompany.ejercicio1.Griego;
+import com.mycompany.ejercicio1.Troyano;
+
 /**
  *
  * @author DAM120
@@ -11,6 +14,14 @@ package com.mycompany.ejercicio2;
 public class Ejercicio2 {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        Troyano t1= new Troyano("Ciro",23,2);
+        Griego g1= new Griego("Saul",25,2);
+        Caballo c1= new Caballo(g1,100);
+        if(c1.montar(t1)==-1){
+            System.out.println("no se puede montar a "+t1.getNombre());
+        }
+        Troyano t2= new Troyano();
+        Griego g2= new Griego();
+        
     }
 }

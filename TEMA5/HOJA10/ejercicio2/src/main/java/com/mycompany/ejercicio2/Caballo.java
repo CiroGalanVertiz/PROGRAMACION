@@ -13,7 +13,7 @@ import java.util.Arrays;
  *
  * @author DAM120
  */
-public class Caballo{
+public class Caballo implements PuedeMontarse{
     private int capacidad;
     private int ocupacion;
     private Guerrero[] ocupantes;
@@ -65,6 +65,25 @@ public class Caballo{
         return posicion;
     }
 
+    @Override
+    public int montar(Guerrero guerrero) {
+        int salida=-1;
+        if(this.ocupacion<this.capacidad-1) {
+        this.ocupantes[ocupacion]=guerrero;
+        ocupacion++;
+        salida=ocupacion;
+    }
+        return salida;
+        
+    }
+
+    @Override
+    public void desmontar() {
+        for(Guerrero guerrero:this.ocupantes){
+            guerrero=null;
+        }
+    }
+
       
     
     
@@ -73,6 +92,6 @@ public class Caballo{
     
     
 
-    
+   
     
 }
