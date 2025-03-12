@@ -8,7 +8,7 @@ package com.mycompany.ejercicio6;
  *
  * @author DAM120
  */
-public class Ejercicio6 {
+public class Ejercicio1 {
 
     public static void main(String[] args) {
        Contenedor<Integer> c1= new Contenedor<>();
