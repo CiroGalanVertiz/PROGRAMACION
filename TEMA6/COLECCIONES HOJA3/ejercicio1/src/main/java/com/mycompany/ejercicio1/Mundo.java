@@ -13,7 +13,7 @@ import java.util.Set;
  * @author DAM120
  */
 public class Mundo {
-    Set<String> paises;
+    private Set<String> paises;
     
     public Mundo(){
         paises = new LinkedHashSet<>();
