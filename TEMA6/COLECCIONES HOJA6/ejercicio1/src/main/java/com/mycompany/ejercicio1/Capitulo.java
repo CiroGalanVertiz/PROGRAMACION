@@ -36,4 +36,29 @@ public class Capitulo {
     public void setDescripcion(String descripcion) {
         this.descripcion = descripcion;
     }
+
+    @Override
+    public int hashCode() {
+        int hash = 7;
+        hash = 97 * hash + this.numTmp;
+        hash = 97 * hash + this.numCap;
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        boolean aux=false;
+        if (this == obj) {
+            aux= true;
+        }
+        if (obj == null) {
+            aux= false;
+        }
+        if (getClass() != obj.getClass()) {
+            aux= false;
+        }
+        final Capitulo other = (Capitulo) obj;
+        return this.numCap == other.numCap && this.numTmp==other.numTmp;
+    }
+    
 }
