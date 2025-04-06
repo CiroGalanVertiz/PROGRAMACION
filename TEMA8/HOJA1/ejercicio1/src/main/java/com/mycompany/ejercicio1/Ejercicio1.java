@@ -4,8 +4,9 @@
 
 package com.mycompany.ejercicio1;
 
+import java.sql.Connection;
+import java.sql.SQLException;
 import java.util.Scanner;
-
 /**
  *
  * @author DAM120
@@ -13,7 +14,10 @@ import java.util.Scanner;
 public class Ejercicio1 {
 
     public static void main(String[] args) {
-        System.out.println("Gestion de usuarios:");
+        int id=0;
+        try(Connection conn= AccesoBaseDatos.getInstance().getConn();){
+            Repositorio<Usuario> repositorio = new UsuarioDAOImp();
+             System.out.println("Gestion de usuarios:");
         int opcion=0;
         do{
             System.out.println("1. Actualizar");
@@ -26,13 +30,28 @@ public class Ejercicio1 {
             
             switch (opcion){
                 case 1->{
-                    
+                        Usuario usuario=null;
+                  id= Teclado.nextInt("Introduce la Id del usuario que quieras modificar");
+                  usuario=repositorio.porId(id);
+                  if(usuario!=null){
+                      usuario.toString();
+                      repositorio.actualizar(id);
+                  }
+                  else{
+                      System.out.println("no se ha encontrado el usuario");
+                  }
                 }
                 case 2->{
-                    
+                     id= Teclado.nextInt("Introduce la Id del usuario que quieras eliminar");
+                  if(repositorio.porId(id)!=null){
+                      repositorio.eliminar(id);
+                  }
+                  else{
+                      System.out.println("no se ha encontrado el usuario");
+                  }
                 }
                 case 3->{
-                    
+                    repositorio.agregar();
                 }
                 case 4->{
                     
@@ -42,5 +61,9 @@ public class Ejercicio1 {
                 }
             }
         }while(opcion!=5);
+        } catch (SQLException ex) {
+           
+        }
+       
     }
 }

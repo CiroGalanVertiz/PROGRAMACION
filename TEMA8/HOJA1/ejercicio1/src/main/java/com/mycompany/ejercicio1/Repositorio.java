@@ -15,6 +15,8 @@ public interface Repositorio<T> {
     public T porId(int Id);
     public void guardar(T t);
     public void eliminar(int id);
+    public void actualizar(int Id);
+    public void agregar();
    
     
 }

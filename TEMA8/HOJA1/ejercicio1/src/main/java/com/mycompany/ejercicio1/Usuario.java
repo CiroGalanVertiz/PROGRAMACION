@@ -9,6 +9,9 @@ package com.mycompany.ejercicio1;
  * @author DAM120
  */
 public class Usuario {
+
+    public Usuario(String string, String string1, String string2) {
+    }
     private int id;
     private String username;
     private String password;
@@ -25,4 +28,10 @@ public class Usuario {
     public String getEmail() {
         return email;
     }
+
+    @Override
+    public String toString() {
+        return "Usuario{" + "id=" + id + ", username=" + username + ", password=" + password + ", email=" + email + '}';
+    }
+    
 }
