@@ -11,7 +11,7 @@ package com.mycompany.ejercicio2;
 public class Ejercicio2 {
 
     public static void main(String[] args) {
-        for (int i = 100; i == 0; i--) {
+        for (int i = 100; i >= 0; i--) {
             System.out.println(i);
         }
         System.out.println("¡DESPEGUE!");
