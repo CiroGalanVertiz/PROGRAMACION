@@ -4,6 +4,8 @@
 
 package com.mycompany.ejercicio5;
 
+import java.util.Scanner;
+
 /**
  *
  * @author DAM121
@@ -11,6 +13,15 @@ package com.mycompany.ejercicio5;
 public class Ejercicio5 {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        Scanner teclado = new Scanner(System.in);
+        System.out.println("Introduce la base");
+        int b = teclado.nextInt();
+        System.out.println("Introduce el exponente");
+        int e = teclado.nextInt();
+        int total=1;
+        for (int i = 0; i < e; i++) {
+            total*=b;
+        }
+        System.out.println(total);
     }
 }
