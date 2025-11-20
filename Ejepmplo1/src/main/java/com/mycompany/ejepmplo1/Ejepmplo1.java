@@ -11,6 +11,6 @@ package com.mycompany.ejepmplo1;
 public class Ejepmplo1 {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        System.out.println("Mi programa Ciro Galan Vertiz");
     }
 }
