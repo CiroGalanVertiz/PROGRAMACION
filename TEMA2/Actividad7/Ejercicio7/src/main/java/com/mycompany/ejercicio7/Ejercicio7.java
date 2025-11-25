@@ -30,7 +30,7 @@ public class Ejercicio7 {
     System.out.println("Frase modificada: " + modificada);
 
     System.out.print("Adivina la frase original: ");
-    String intento = sc.nextLine();
+    String intento = teclado.nextLine();
 
     if (intento.equals(frase)) System.out.println("¡Correcto!");
     else System.out.println("Incorrecto.");
