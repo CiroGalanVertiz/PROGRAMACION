@@ -15,7 +15,7 @@ public class ArrayUtil {
             if(!estaVacio(array)){
                 while(true){
                 
-                    System.out.println(array[c]);
+                   array[c]=array[c];
                 c++;
             }
             }

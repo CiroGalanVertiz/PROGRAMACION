@@ -9,7 +9,7 @@ package bibliotecaarrays;
  * @author DAM121
  */
 public class ArrayBusqueda {
-    public boolean contiene(int array[],int num){
+    public static boolean contiene(int array[],int num){
         boolean contiene=false;
         for (int i = 0; i < ArrayUtil.contarElementos(array) && !contiene; i++) {
             if(array[i]==num){
@@ -19,7 +19,7 @@ public class ArrayBusqueda {
         }
         return contiene;
 }
-    public int indiceDe (int array[],int num){
+    public static int indiceDe (int array[],int num){
         int resultado=-1;
         boolean encontrado=false;
         for (int i = 0; i < ArrayUtil.contarElementos(array) && !encontrado; i++) {
@@ -31,7 +31,7 @@ public class ArrayBusqueda {
         }
         return resultado;
     }
-    public int ultimoindiceDe (int array[],int num){
+    public static int ultimoindiceDe (int array[],int num){
         int resultado=-1;
         for (int i = 0; i < ArrayUtil.contarElementos(array); i++) {
             if(array[i]==num){

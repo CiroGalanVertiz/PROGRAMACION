@@ -4,6 +4,8 @@
 
 package com.mycompany.actividadextra;
 
+import bibliotecaarrays.ArrayBidimensional;
+import bibliotecaarrays.ArrayModificacion;
 import bibliotecaarrays.ArrayUtil;
 
 /**
@@ -13,7 +15,12 @@ import bibliotecaarrays.ArrayUtil;
 public class ActividadExtra {
 
     public static void main(String[] args) {
-        int[] prueba = new int[]{1,2,3,4,5};
-        System.out.println(ArrayUtil.contarElementos(prueba));
+        int suma=0;
+        int[][] prueba1 = {{1,2,3,4,5},{1,2,3,4,5,6}};
+        int[] prueba2 = {1,2,3,4,5};
+        int[] prueba3 = {1,2,3,4,5,6};
+        System.out.println(ArrayBidimensional.contarElementos(prueba1));
+        
+        
     }
 }

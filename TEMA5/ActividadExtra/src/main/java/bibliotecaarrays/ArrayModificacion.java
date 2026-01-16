@@ -9,11 +9,11 @@ package bibliotecaarrays;
  * @author DAM121
  */
 public class ArrayModificacion {
-    public int[] copia(int array[]){
+    public static int[] copia(int array[]){
         int[] copia = array;
         return copia;
     }
-    public int[] invertir(int array[]){
+    public static int[] invertir(int array[]){
        int[] copia = new int [ArrayUtil.contarElementos(array)];
         for (int i = ArrayUtil.contarElementos(array); i > 0; i--) {
             for (int j = 0; i < ArrayUtil.contarElementos(array); j++) {
@@ -21,6 +21,16 @@ public class ArrayModificacion {
             }
         }
         return copia;
+    }
+    public static int[] concatenar(int[] array1,int[] array2){
+        int [] array = new int[ArrayUtil.contarElementos(array1)+ArrayUtil.contarElementos(array2)];
+        for (int i = 0; i < ArrayUtil.contarElementos(array1); i++) {
+            array[i]=array1[i];
+        }
+        for (int i = 0; i < ArrayUtil.contarElementos(array2); i++) {
+            array[i+ArrayUtil.contarElementos(array1)]=array2[i];
+        }
+        return array;
     }
     
 }

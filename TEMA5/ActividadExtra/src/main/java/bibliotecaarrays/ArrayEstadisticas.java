@@ -9,17 +9,17 @@ package bibliotecaarrays;
  * @author DAM121
  */
 public class ArrayEstadisticas {
-    public int suma(int[] array){
+    public static int suma(int[] array){
         int suma=0;
         for (int i = 0; i < ArrayUtil.contarElementos(array); i++) {
             suma+=array[i];
         }
         return suma;
     }
-    public double media(int[] array){
+    public static double media(int[] array){
         return suma(array)/ArrayUtil.contarElementos(array);
     }
-    public int maximo(int[] array){
+    public static int maximo(int[] array){
         int maximo=Integer.MIN_VALUE;
         for (int i = 0; i < ArrayUtil.contarElementos(array); i++) {
             if(array[i]>maximo){
@@ -28,7 +28,7 @@ public class ArrayEstadisticas {
         }
         return maximo;
     }
-    public int minimo(int[] array){
+    public static int minimo(int[] array){
         int maximo=Integer.MAX_VALUE;
         for (int i = 0; i < ArrayUtil.contarElementos(array); i++) {
             if(array[i]<maximo){
