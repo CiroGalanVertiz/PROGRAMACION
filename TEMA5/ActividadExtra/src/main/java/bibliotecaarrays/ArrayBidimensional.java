@@ -8,6 +8,6 @@ package bibliotecaarrays;
  *
  * @author DAM121
  */
-public class NewClass {
+public class ArrayBidimensional {
     
 }

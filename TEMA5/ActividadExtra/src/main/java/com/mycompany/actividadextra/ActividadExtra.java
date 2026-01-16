@@ -4,6 +4,8 @@
 
 package com.mycompany.actividadextra;
 
+import bibliotecaarrays.ArrayUtil;
+
 /**
  *
  * @author DAM121
@@ -11,6 +13,7 @@ package com.mycompany.actividadextra;
 public class ActividadExtra {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        int[] prueba = new int[]{1,2,3,4,5};
+        System.out.println(ArrayUtil.contarElementos(prueba));
     }
 }
