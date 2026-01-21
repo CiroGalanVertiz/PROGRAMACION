@@ -52,7 +52,7 @@ public class ArrayBidimensional {
     }
     public static int sumaFila(int[][] matriz,int fila){
         int suma=0;
-        for (int i = 0; i <contarFilas(matriz); i++) {
+        for (int i = 0; i <ArrayUtil.contarElementos(matriz[fila]); i++) {
                 suma+= matriz[fila][i];
         }
         return suma;

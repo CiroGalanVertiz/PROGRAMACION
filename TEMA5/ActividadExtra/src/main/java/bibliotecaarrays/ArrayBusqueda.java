@@ -31,7 +31,7 @@ public class ArrayBusqueda {
         }
         return resultado;
     }
-    public static int ultimoindiceDe (int array[],int num){
+    public static int ultimoIndiceDe (int array[],int num){
         int resultado=-1;
         for (int i = 0; i < ArrayUtil.contarElementos(array); i++) {
             if(array[i]==num){

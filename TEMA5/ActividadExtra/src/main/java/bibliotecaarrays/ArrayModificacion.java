@@ -9,16 +9,15 @@ package bibliotecaarrays;
  * @author DAM121
  */
 public class ArrayModificacion {
-    public static int[] copia(int array[]){
+    public static int[] copiar(int array[]){
         int[] copia = array;
         return copia;
     }
     public static int[] invertir(int array[]){
        int[] copia = new int [ArrayUtil.contarElementos(array)];
-        for (int i = ArrayUtil.contarElementos(array); i > 0; i--) {
-            for (int j = 0; i < ArrayUtil.contarElementos(array); j++) {
-                copia[j]=array[i];
-            }
+        for (int i = ArrayUtil.contarElementos(array)-1,j=0; i >=0; i--,j++) {
+            copia[j]=array[i];
+            
         }
         return copia;
     }
