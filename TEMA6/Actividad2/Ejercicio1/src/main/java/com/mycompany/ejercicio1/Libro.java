@@ -26,7 +26,7 @@ public class Libro extends Publicacion {
 
     @Override
     public String toString() {
-        return super.toString() + "numPaginas=" + numPaginas;
+        return super.toString()+ " numPaginas=" + numPaginas;
     }
     
     

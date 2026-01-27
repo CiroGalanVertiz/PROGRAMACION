@@ -27,7 +27,7 @@ public class Disco extends Publicacion {
 
     @Override
     public String toString() {
-        return super.toString()+ "duracionMinutos=" + duracionMinutos;
+        return super.toString()+ " duracionMinutos=" + duracionMinutos;
     }
     
 }

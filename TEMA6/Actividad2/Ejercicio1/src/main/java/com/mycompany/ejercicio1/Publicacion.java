@@ -6,6 +6,7 @@ package com.mycompany.ejercicio1;
 
 import java.time.LocalDate;
 import java.util.Calendar;
+import java.util.GregorianCalendar;
 
 /**
  *
@@ -19,8 +20,8 @@ public class Publicacion {
     public Publicacion(String titulo, String autor, int ano,int mes,int dia) {
         this.titulo = titulo;
         this.autor = autor;
-        this.fecha= Calendar.getInstance();
-        this.fecha.set(ano, mes, dia);
+        this.fecha = new GregorianCalendar(ano, mes-1, dia);
+
         
     }
 
@@ -53,7 +54,10 @@ public class Publicacion {
         return "titulo=" + titulo + ", autor=" + autor + ", fecha=" + format(fecha);
     }
     private String format(Calendar fecha){
-        return fecha.getTime().getYear()+"/"+fecha.getTime().getMonth()+"/"+fecha.getTime().getDay();
+        return String.format("%04d/%02d/%02d",
+        fecha.get(Calendar.YEAR),
+        fecha.get(Calendar.MONTH) + 1,
+        fecha.get(Calendar.DAY_OF_MONTH));
     }
     
 
