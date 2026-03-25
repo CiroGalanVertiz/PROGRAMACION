@@ -10,14 +10,25 @@ import java.util.Set;
  *
  * @author cococ
  */
-public class GestorEmpleados {
+public class GestorEmpleados{
     Set<Empleado> empleados;
     public void ratioEmpleado(){
+        int contador=0;
         for(Empleado e:this.empleados){
             if(e.getGenero()==Genero.FEMENINO){
-                
+                contador++;
             }
         }
-        System.out.println();
+        System.out.println("Hay "+contador+" mujeres entre "+this.empleados.size()+" empleados");
+    }
+    public void ratioEmpleadoPorTipo(Class tipo){
+        int contador=0;
+        
+        for(Empleado e:this.empleados){
+            if(tipo.isInstance(e)){
+                contador++;
+            }
+        }
+        System.out.println("Hay "+contador+" "+tipo.getName()+" entre "+this.empleados.size()+" empleados");
     }
 }
