@@ -9,7 +9,6 @@ package com.mycompany.ejercicio1;
  * @author DAM121
  */
 public enum Tematica {
-    policial, comedia, infantil,
-aventura
+    policial, comedia, infantil,aventura
 
 }

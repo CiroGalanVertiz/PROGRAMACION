@@ -12,6 +12,13 @@ public class Capitulo {
     int numTemp;
     int numCap;
     String descripcion;
+    public Capitulo(){
+        
+        this.numTemp=Teclado.nextInt("Introduce el numero de la temporada");
+        this.numCap=Teclado.nextInt("Introduce el numero del capitulo");  
+        this.descripcion=Teclado.nextLine("Introduce una descripcion");
+        
+    }
 
     public int getNumTemp() {
         return numTemp;
@@ -24,6 +31,12 @@ public class Capitulo {
     public String getDescripcion() {
         return descripcion;
     }
+
+    @Override
+    public String toString() {
+        return "Capitulo{" + "numTemp=" + numTemp + ", numCap=" + numCap + ", descripcion=" + descripcion + '}';
+    }
+    
     
     
 }
