@@ -11,6 +11,13 @@ package com.mycompany.museo8m;
 public class Obra {
     private String titulo;
     private String autor;
-    private String genero;
+    private Genero genero;
     private int precio;
+
+    public Genero getGenero() {
+        return genero;
+    }
+    
+    
+    
 }

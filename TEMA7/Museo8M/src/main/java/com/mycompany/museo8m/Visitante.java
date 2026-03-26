@@ -9,5 +9,13 @@ package com.mycompany.museo8m;
  * @author cococ
  */
 public class Visitante {
-    private String edad,genero,provincia;
+    private String edad;
+    private Genero genero;
+    private String provincia;
+
+    public Genero getGenero() {
+        return genero;
+    }
+    
+    
 }

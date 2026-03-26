@@ -14,5 +14,13 @@ public class Empleado extends Persona{
     private LocalDate fechaAlta;
     private String numSeguridadSocial;
     private double sueldo;
+
+    public String getNumSeguridadSocial() {
+        return numSeguridadSocial;
+    }
+
+    public double getSueldo() {
+        return sueldo;
+    }
     
 }
