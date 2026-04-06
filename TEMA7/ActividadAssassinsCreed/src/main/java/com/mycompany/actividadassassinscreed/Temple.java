@@ -5,6 +5,7 @@
 package com.mycompany.actividadassassinscreed;
 
 import java.util.Collection;
+import java.util.Set;
 import java.util.TreeSet;
 
 /**
@@ -12,16 +13,11 @@ import java.util.TreeSet;
  * @author cococ
  */
 
-public class Temple {
+public class Temple{
     private TreeSet<Templario> templarios;
 
     public Temple() {
-        templarios = new TreeSet<>((t1, t2) -> {
-            if (t1.getNombre().equals(t2.getNombre())) return 0;
-            int cmp = Long.compare(t1.getNivel_peligrosidad(), t2.getNivel_peligrosidad());
-            if (cmp == 0) return t1.getNombre().compareTo(t2.getNombre());
-            return cmp;
-        });
+        templarios = new TreeSet<>();
     }
 
     public boolean insertar(Templario t) {

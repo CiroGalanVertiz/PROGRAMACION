@@ -36,7 +36,7 @@ public class ElCredoDeLosAsesinos {
         temple.insertar(new Templario("César Borgia", "Orden del Temple", 10));
 
         // 7. Mostrar ascendente (corrección)
-        temple.mostrar(true);
+        temple.mostrar(false);
 
         // 8-9. Añadir artefactos
         gremio.agregarAInventario(new Artefacto("Fruto del Edén", "Precursores", "Control mental y manipulación"));
