@@ -17,9 +17,18 @@ public class Ejercicio4 {
         System.out.println("Introduce el nombre de una ruta");
         File file = new File(new Scanner(System.in).next());
         if(file.exists() && file.isDirectory()){
-            for(File f: file.listFiles()){
-                System.out.println(f.getName());
-            }
+            Ejercicio4.mostrarDirectorio(file);
         }
     }
+    private static void mostrarDirectorio(File file){
+        
+        for(File f: file.listFiles()){
+            System.out.println(f.getName());
+            if(f.isDirectory() && f.listFiles()!=null){
+                Ejercicio4.mostrarDirectorio(f);
+            }
+                
+            
+    }
+}
 }
