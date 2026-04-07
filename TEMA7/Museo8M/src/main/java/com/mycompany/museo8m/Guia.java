@@ -10,4 +10,8 @@ package com.mycompany.museo8m;
  */
 public class Guia extends Empleado{
     private String idioma;
+public Guia() {
+    super();
+    idioma = Teclado.nextLine("Idioma: ");
+}
 }

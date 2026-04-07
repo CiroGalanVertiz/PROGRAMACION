@@ -10,4 +10,8 @@ package com.mycompany.museo8m;
  */
 public class Directivo extends Empleado{
     private String departamento;
+    public Directivo() {
+    super();
+    departamento = Teclado.nextLine("Departamento: ");
+}
 }

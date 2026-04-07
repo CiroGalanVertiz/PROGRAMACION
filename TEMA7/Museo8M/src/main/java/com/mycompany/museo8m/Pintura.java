@@ -9,5 +9,10 @@ package com.mycompany.museo8m;
  * @author cococ
  */
 public class Pintura extends Obra{
- private String tipoPintura;   
+ private String tipoPintura;
+ 
+ public Pintura() {
+    super();
+    tipoPintura = Teclado.nextLine("Tipo de pintura: ");
+}
 }

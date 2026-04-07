@@ -10,4 +10,8 @@ package com.mycompany.museo8m;
  */
 public class Escultura extends Obra{
     private String material;
+    public Escultura() {
+    super();
+    material = Teclado.nextLine("Material: ");
+}
 }

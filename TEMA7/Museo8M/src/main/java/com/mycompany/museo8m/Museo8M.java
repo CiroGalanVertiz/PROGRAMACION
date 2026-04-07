@@ -74,11 +74,11 @@ public class Museo8M{
     private static void calculosEstadisticas() {
         System.out.println("\n--- Cálculos y Estadísticas ---");
         ge.ratioEmpleado();
-        ge.ratioEmpleadoPorTipo(Teclado.nextLine("Introduce el nombre de la clase a filtrar"));
+        ge.ratioEmpleadoPorTipo(Teclado.nextLine("Introduce el nombre de la clase a filtrar (La primera en mayuscula)"));
         ge.brechaSalarial();
-        ge.brechaSalarialPorTipo("Guía");
-        ge.ratioObras();
-        ge.ratioVisitantes();
+        ge.brechaSalarialPorTipo(Teclado.nextLine("Introduce el nombre de la clase a filtrar (La primera en mayuscula)"));
+        go.ratioObras();
+        gv.ratioVisitantes();
     }
 }
 

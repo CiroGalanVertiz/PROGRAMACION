@@ -6,7 +6,6 @@ package com.mycompany.museo8m;
 
 import java.util.Iterator;
 import java.util.Set;
-import java.util.stream.Stream;
 
 /**
  *
@@ -40,13 +39,8 @@ public class GestorEmpleados{
 }
     
     public void ratioEmpleado(){
-        int contador=0;
-        for(Empleado e:this.empleados){
-            if(e.getGenero()==Genero.FEMENINO){
-                contador++;
-            }
-        }
-        System.out.println("Hay "+contador+" mujeres entre "+this.empleados.size()+" empleados");
+            System.out.println("Empleadas: " + empleados.stream().filter(v -> v.getGenero() == Genero.FEMENINO).count() + "\nEmpleados: " + empleados.stream().filter(v -> v.getGenero() == Genero.MASCULINO).count());
+
     }
     public void ratioEmpleadoPorTipo(String tipo){
         int contador=0;
@@ -83,7 +77,7 @@ public class GestorEmpleados{
         }
         System.out.printf("%,.02f€ / hombre\n%,.02f€ / mujer",(salarioHombres/hombres),(salarioMujeres/mujeres));
     }
-    public void brechaSalarialTipo(String tipo){
+    public void brechaSalarialPorTipo(String tipo){
         double salarioMujeres=0;
         double salarioHombres=0;
         int mujeres=0;
@@ -91,7 +85,7 @@ public class GestorEmpleados{
         try{
             Class<?> clase = Class.forName(tipo);
         for(Empleado e:empleados){
-            if(tipo.isInstance(e)){
+            if(clase.isInstance(e)){
             if(e.getGenero()==Genero.MASCULINO){
                 salarioHombres+=e.getSueldo();
                 hombres++;

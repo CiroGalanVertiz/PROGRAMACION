@@ -18,6 +18,11 @@ public class Obra {
         return genero;
     }
     
-    
+    public Obra() {
+    titulo = Teclado.nextLine("Título: ");
+    autor = Teclado.nextLine("Autor: ");
+    genero = Genero.valueOf(Teclado.nextLine("Género: "));
+    precio = Teclado.nextInt("Precio: ");
+}
     
 }

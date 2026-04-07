@@ -10,4 +10,9 @@ package com.mycompany.museo8m;
  */
 public class PersonalLimpieza {
     private String turno;
+    
+public PersonalLimpieza() {
+    super();
+    turno = Teclado.nextLine("Turno: ");
+}
 }

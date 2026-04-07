@@ -10,4 +10,9 @@ package com.mycompany.museo8m;
  */
 public class Libro extends Obra{
     private String editorial;
+    
+public Libro() {
+    super();
+    this.editorial = Teclado.nextLine("Editorial: ");
+}
 }

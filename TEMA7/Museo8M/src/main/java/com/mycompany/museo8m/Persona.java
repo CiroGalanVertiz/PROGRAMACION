@@ -12,6 +12,12 @@ public class Persona {
     protected String nombre;
     protected String apellidos;
     protected Genero genero;
+    
+    public Persona() {
+    nombre = Teclado.nextLine("Nombre: ");
+    apellidos = Teclado.nextLine("Apellidos: ");
+    genero = Genero.valueOf(Teclado.nextLine("Género: ").toUpperCase());
+}
 
     public Genero getGenero() {
         return genero;
