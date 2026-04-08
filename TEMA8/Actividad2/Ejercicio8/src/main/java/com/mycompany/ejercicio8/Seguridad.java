@@ -15,23 +15,10 @@ import java.io.IOException;
  * @author DAM121
  */
 public class Seguridad {
-    private FileInputStream lectura;
-    private FileOutputStream escritura;
-    private File file;
-    private static int caracter;
-    
-    public Seguridad(File file) throws FileNotFoundException{
-        this.lectura= new FileInputStream(file);
-        this.escritura= new FileOutputStream(file);
-        this.file= file;
+    public static File encriptar(File file) throws IOException{
+    File file()
     }
-    public void encriptar() throws IOException{
-        File fichero=new File(file.getAbsolutePath());
-        while((caracter=lectura.read())!=-1){
-        escritura.write((char)caracter+3);
-    }
-    }
-    public void desencriptar() throws IOException{
+    public static File desencriptar() throws IOException{
         while((caracter=lectura.read())!=-1){
         escritura.write((char)caracter-3);
     }
