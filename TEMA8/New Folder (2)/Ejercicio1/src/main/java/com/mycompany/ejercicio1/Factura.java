@@ -18,6 +18,7 @@ public class Factura implements Serializable{
     private String nombre;
     private double importe;
     private boolean pagado;
+    private final long serialVersionUID=3489348372545443L;
     
     public Factura(){
         System.out.println("Introduce el numero de facura:");
@@ -55,7 +56,7 @@ public class Factura implements Serializable{
 
     @Override
     public String toString() {
-        return "Factura{" + "teclado=" + teclado + ", numeroFac=" + numeroFac + ", nombre=" + nombre + ", importe=" + importe + ", pagado=" + pagado + '}';
+        return "Factura{" + "numeroFac=" + numeroFac + ", nombre=" + nombre + ", importe=" + importe + ", pagado=" + pagado + '}';
     }
     
     

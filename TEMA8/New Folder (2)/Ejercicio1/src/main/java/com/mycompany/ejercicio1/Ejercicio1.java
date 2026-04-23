@@ -3,6 +3,7 @@
  */
 package com.mycompany.ejercicio1;
 
+import java.io.EOFException;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -60,8 +61,7 @@ public class Ejercicio1 {
 
     public static void anadirFactura() throws IOException {
         try(ObjectOutputStream oos = fichero.length()==0 || fichero.createNewFile()==true? new ObjectOutputStream(new FileOutputStream(fichero,true)): new MiObjectOutputStream(new FileOutputStream(fichero,true));){
-            Factura f= new Factura();
-            oos.writeObject(f);
+            oos.writeObject(new Factura());
         }
             
             
@@ -76,6 +76,8 @@ public class Ejercicio1 {
                 System.out.println(f);
             }
 
+        }catch(EOFException e){
+            System.out.println("Fin de la Lista");
         }
     }
 }
