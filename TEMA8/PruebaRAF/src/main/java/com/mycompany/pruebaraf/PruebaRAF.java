@@ -70,15 +70,14 @@ public class PruebaRAF {
         }
 
     }
-
+//raf.seek es un metodo que almacena los objetos en cantidad de bytes
     private static void listarPares() throws IOException {
         try (RandomAccessFile raf = new RandomAccessFile(fichero1,"r")) {
-            raf.seek(2*tamanioAlumno);
             int numRegistros= (int)raf.length()/tamanioAlumno;
             for (int i = 0; i < numRegistros; i+=2) {
                 raf.seek(i*tamanioAlumno);
                 System.out.println(raf.readInt());
-                System.out.println(raf.readUTF());
+                System.out.println(raf.readUTF().trim());
                 System.out.println(raf.readInt());
                 System.out.println(raf.readInt());
                 System.out.println(raf.readInt());
